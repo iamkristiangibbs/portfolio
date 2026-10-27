@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>iamkristiangibbs — content creator &amp; social media manager</title>
+<meta name="description" content="Kristian is a Computer Science Student and fashion enthusiast who creates fashion content, edits video & photos, and handles social media for brands.">
+<meta name="theme-color" content="#120c07">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23120c07'/%3E%3Ctext x='50' y='72' font-size='64' text-anchor='middle' fill='%23f2a93b' font-family='Georgia' font-style='italic'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#120c07; --night:#1c140c; --paper:#f7eee0; --muted:#cdbfae;
+  --amber:#f2a93b; --clay:#c9824a; --sky:#8fc3ea;
+  --font:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --script:'Yellowtail','Brush Script MT',cursive;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font:400 1.0625rem/1.6 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn{display:inline-block;font:600 1rem var(--font);padding:.8rem 1.5rem;border-radius:99px;text-decoration:none;border:1.5px solid var(--amber);background:var(--amber);color:#1a1004;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:#ffc15f}
+.btn.ghost{background:transparent;color:var(--paper);border-color:rgba(247,238,224,.55)}
+.btn.ghost:hover{background:rgba(247,238,224,.14)}
+.btn.sm{padding:.45rem 1.1rem;font-size:.92rem}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;isolation:isolate;padding:5rem 1.25rem 7rem}
+.photo{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.veil{position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(70% 45% at 0% 100%,rgba(242,169,59,.3),transparent 70%),
+  radial-gradient(70% 45% at 100% 100%,rgba(143,195,234,.16),transparent 70%),
+  linear-gradient(rgba(18,12,7,.68),rgba(18,12,7,.52) 45%,rgba(18,12,7,.9))}
+.bar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:calc(1rem + env(safe-area-inset-top,0px)) 1.5rem 1rem}
+.bar .logo{font-family:var(--script);font-size:1.8rem;text-decoration:none}
+.bar nav{display:flex;gap:1.3rem;align-items:center;font-weight:600;font-size:.95rem}
+.bar nav a:not(.btn){text-decoration:none;opacity:.9}.bar nav a:not(.btn):hover{opacity:1}
+#stage{width:100%;max-width:62rem;min-height:14rem;display:grid;place-items:center;text-align:center;font-weight:800;letter-spacing:-.03em;line-height:1.02;font-size:clamp(2.3rem,8.5vw,6.5rem);text-shadow:0 2px 28px rgba(0,0,0,.7)}
+.b{animation:in .2s cubic-bezier(.2,.9,.3,1) both}
+.b.leave{animation:out .09s linear both}
+@keyframes in{from{opacity:0;filter:blur(5px);transform:scale(1.14)}to{opacity:1;filter:none;transform:none}}
+@keyframes out{to{opacity:0;transform:scale(.96)}}
+.slam{animation:slam .26s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes slam{from{opacity:0;transform:scale(1.9)}60%{opacity:1}to{transform:none}}
+.slide{animation:slide .22s ease-out both}
+@keyframes slide{from{opacity:0;transform:translateY(.5em)}}
+.blur{animation:blurin .35s ease-out both}@keyframes blurin{from{opacity:0;filter:blur(22px);transform:scale(1.3)}}
+.left{animation:fromL .24s cubic-bezier(.2,.9,.3,1) both}@keyframes fromL{from{opacity:0;transform:translateX(-1.4em) skewX(-12deg)}}
+.right{animation:fromR .24s cubic-bezier(.2,.9,.3,1) both}@keyframes fromR{from{opacity:0;transform:translateX(1.4em) skewX(12deg)}}
+.down{animation:fromT .24s cubic-bezier(.2,.9,.3,1) both}@keyframes fromT{from{opacity:0;transform:translateY(-.6em)}}
+.zoom{animation:zin .26s cubic-bezier(.2,.9,.3,1.3) both}@keyframes zin{from{opacity:0;transform:scale(.3)}}
+.flip{animation:flip .34s cubic-bezier(.2,.9,.3,1) both}@keyframes flip{from{opacity:0;transform:perspective(700px) rotateX(-85deg)}to{opacity:1;transform:perspective(700px) rotateX(0)}}
+.spin{animation:spin .3s cubic-bezier(.2,.9,.3,1.2) both}@keyframes spin{from{opacity:0;transform:rotate(-14deg) scale(.6)}}
+.reveal{animation:reveal .35s ease-out both}@keyframes reveal{from{clip-path:inset(0 0 100% 0);transform:translateY(.3em)}to{clip-path:inset(-20% -5% -20% -5%)}}
+.flicker{animation:flick .6s steps(1) both}@keyframes flick{0%{opacity:0}10%{opacity:1}20%{opacity:.1}30%{opacity:1}45%{opacity:.3}60%,100%{opacity:1}}
+.glitch{animation:glitch .4s steps(2,end) both}@keyframes glitch{0%{opacity:0;transform:translateX(-.08em);text-shadow:.06em 0 #8fc3ea,-.06em 0 #f2a93b}25%{opacity:1;transform:translateX(.07em);text-shadow:-.06em 0 #8fc3ea,.06em 0 #f2a93b}50%{transform:translateX(-.04em);text-shadow:.04em 0 #8fc3ea,-.04em 0 #f2a93b}75%{transform:translateX(.02em)}100%{transform:none;text-shadow:0 2px 28px rgba(0,0,0,.7)}}
+.bounce{animation:bounce .55s both}@keyframes bounce{0%{opacity:0;transform:translateY(-1.2em)}45%{opacity:1;transform:none}60%{transform:translateY(-.25em)}78%{transform:none}90%{transform:translateY(-.08em)}100%{transform:none}}
+.words span{display:inline-block;animation:slide .22s ease-out both}
+.b.leave.xu{animation-name:outU}.b.leave.xl{animation-name:outL}.b.leave.xr{animation-name:outR}.b.leave.xz{animation-name:outZ}
+@keyframes outU{to{opacity:0;transform:translateY(-.5em)}}@keyframes outL{to{opacity:0;transform:translateX(-1em)}}@keyframes outR{to{opacity:0;transform:translateX(1em)}}@keyframes outZ{to{opacity:0;transform:scale(1.5)}}
+
+.sig{font-family:var(--script);font-weight:400;letter-spacing:0;font-size:clamp(4rem,17vw,12rem);color:#fff;clip-path:inset(0 100% 0 0);animation:wipe .6s .03s ease-out forwards}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.out{color:transparent;-webkit-text-stroke:2px var(--paper);letter-spacing:.01em}
+.glow{text-shadow:0 0 18px rgba(255,255,255,.9),0 0 50px rgba(242,169,59,.9)}
+.rain span{display:inline-block;animation:pop .2s both}
+@keyframes pop{from{opacity:0;transform:translateY(.4em) scale(.6)}}
+.amber{color:var(--amber)}
+.ctl{position:absolute;bottom:calc(1.5rem + env(safe-area-inset-bottom,0px));left:0;right:0;display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;align-items:center}
+.ctl button.btn{background:rgba(18,12,7,.5);color:var(--paper);border-color:rgba(247,238,224,.4);backdrop-filter:blur(6px);font-weight:400}
+
+/* sections */
+section{padding:clamp(4rem,9vw,7rem) 1.5rem}
+.wrap{max-width:68rem;margin:0 auto}
+h2{font-weight:800;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.03em;margin-bottom:2rem;max-width:20ch}
+h3.sub{font-size:1.3rem;font-weight:600;margin:2.5rem 0 1rem}
+.alt{background:var(--night)}
+.about{max-width:46rem}
+.about p{color:var(--muted);max-width:60ch;margin-bottom:1.2rem}.about p:first-of-type{color:var(--paper);font-size:1.3rem;line-height:1.45}
+.svc{list-style:none;padding:0;border-top:1px solid rgba(247,238,224,.2)}
+.svc li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid rgba(247,238,224,.2)}
+.svc h3{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.svc p{color:var(--muted);max-width:56ch}
+.vids{display:grid;grid-template-columns:1fr 1fr 1.9fr;gap:1rem;align-items:center}
+.vids figure{margin:0}
+.vids video{width:100%;display:block;border-radius:16px;background:#000;object-fit:cover}
+.vids figcaption,.pics figcaption{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+.pics{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.pics img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block}
+.pics figure{margin:0}
+.row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.do{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1rem 2.5rem;max-width:62rem}
+.do li{position:relative;padding-left:2rem;color:var(--paper)}
+.do li::before{content:"";position:absolute;left:0;top:.45em;width:.9rem;height:.5rem;border-left:2.5px solid var(--amber);border-bottom:2.5px solid var(--amber);transform:rotate(-45deg)}
+.lead{color:var(--muted);max-width:50ch;margin-bottom:1.5rem}
+footer{padding:2rem 1.5rem calc(2rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.9rem;text-align:center}
+@media (max-width:760px){.vids{grid-template-columns:1fr 1fr}.vids figure:last-child{grid-column:1/-1}.svc li{grid-template-columns:1fr;gap:.4rem}.bar nav a:not(.btn){display:none}}
+@media (prefers-reduced-motion:reduce){.b,.sig,.rain span,.words span{animation:none!important;clip-path:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <img class="photo" src="assets/img/hero.jpg" alt="Kristian holding a Nikon camera in a bright room with a tall window" fetchpriority="high">
+  <div class="veil"></div>
+  <div class="bar">
+    <a class="logo" href="#top">Kristian Gibbs</a>
+    <nav><a href="#work">Work</a><a href="#services">Services</a><a class="btn sm" href="#contact">Hire me</a></nav>
+  </div>
+  <h1 class="sr">Kristian Gibbs — fashion content creator, video and photo editor, and social media manager</h1>
+  <div id="stage" aria-hidden="true"></div>
+  <div class="ctl">
+    <a class="btn" href="#work">See my work</a>
+    <a class="btn ghost" href="#contact">Get in touch</a>
+    <button id="pp" class="btn" type="button" aria-label="Pause intro animation">Pause</button>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about">
+    <h2>"The Content that keeps you from scrolling."</h2>
+    <p>I’m Kristian, a Computer Science student and fashion enthusiast. I make fashion content, edit videos & photos, and run social media pages: planning, posting, captions and replies.</p>
+    <p>I post on Instagram, TikTok and Pinterest as @iamkristiangibbs, so you can see my eye for style and my editing today. I don’t have agency experience yet. What I bring is taste, consistency, and a habit of posting on schedule.</p>
+  </div>
+</section>
+
+<section class="alt" id="services">
+  <div class="wrap">
+    <h2>What I create</h2>
+    <ul class="svc">
+      <li><h3>Fashion content</h3><p>Outfit and styling content built around your pieces: try-ons, workout fits, drop teasers, lookbooks and behind the scenes.</p></li>
+      <li><h3>Video editing</h3><p>Reels and TikToks with tight cuts, clean transitions, readable captions and sound that fits the mood.</p></li>
+      <li><h3>Photo editing</h3><p>Colour, crop and retouch for product and lifestyle shots, with one consistent look across every platform.</p></li>
+      <li><h3>Social media handling</h3><p>Posting, captions, hashtags and replying to comments and DMs on Instagram, TikTok and Pinterest.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>My Page and Work</h2>
+
+    <h3 class="sub">Photos</h3>
+    <div class="pics">
+      <figure><img src="assets/img/stairs.jpg" alt="Two matching white textured shirts and wide dark jeans shot on a wooden staircase" loading="lazy"></figure>
+      <figure><img src="assets/img/allblack.jpg" alt="Warm film-style portrait in a black top and light jeans on a stool" loading="lazy"></figure>
+      <figure><img src="assets/img/stool-bw.jpg" alt="Black and white portrait in window light" loading="lazy"></figure>
+      <figure><img src="assets/img/carport.jpg" alt="Striped knit and wide light jeans styled next to a car with a leather bag" loading="lazy"></figure>
+    </div>
+    <br>
+    <br>
+
+    <h3 class="sub" style="margin-top:0">Videos</h3>
+    <div class="vids">
+      <figure><video controls playsinline preload="none" poster="assets/img/clip1-poster.jpg" style="aspect-ratio:9/16" aria-label="Fashion outfit video"><source src="assets/video/clip1.mp4" type="video/mp4"></video><figcaption>Outfit video</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="assets/img/clip2-poster.jpg" style="aspect-ratio:9/16" aria-label="Behind the lens reel"><source src="assets/video/clip2.mp4" type="video/mp4"></video><figcaption>Behind the lens reel</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="assets/img/clip3-poster.jpg" style="aspect-ratio:16/9" aria-label="The art of being late"><source src="assets/video/clip3.mp4" type="video/mp4"></video><figcaption>The art of being late</figcaption></figure>
+    </div>
+
+    <div class="row">
+      <a class="btn" href="https://instagram.com/iamkristiangibbs" target="_blank" rel="noopener">See more on Instagram</a>
+      <a class="btn ghost" href="https://www.tiktok.com/@iamkristiangibbs" target="_blank" rel="noopener">Watch on TikTok</a>
+      <a class="btn ghost" href="https://pinterest.com/iamkristiangibbs" target="_blank" rel="noopener">Browse Pinterest</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>What I’ll do for your brand</h2>
+    <ul class="do">
+      <li>Learn your brand, your customer and what similar fitness brands post</li>
+      <li>Plan a monthly content calendar</li>
+      <li>Shoot and edit reels, TikToks and photos in one consistent style</li>
+      <li>Write captions and hashtags in your brand’s voice</li>
+      <li>Post on a schedule across Instagram, TikTok and Pinterest</li>
+      <li>Reply to comments and DMs</li>
+      <li>Share a short monthly report on what worked and what to try next</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let’s make something for your brand.</h2>
+    <p class="lead">Tell me what you’re launching and I’ll send back a few content ideas. Email: <a href="mailto:kristiangibbsm@gmail.com">kristiangibbsm@gmail.com</a></p>
+    <div class="row" style="margin-top:0">
+      <a class="btn" href="mailto:kristiangibbsm@gmail.com?subject=Content%20creator%20enquiry">Email me</a>
+      <a class="btn ghost" href="https://instagram.com/iamkristiangibbs" target="_blank" rel="noopener">Message on Instagram</a>
+      <a class="btn ghost" href="https://www.tiktok.com/@iamkristiangibbs" target="_blank" rel="noopener">TikTok</a>
+      <a class="btn ghost" href="https://pinterest.com/iamkristiangibbs" target="_blank" rel="noopener">Pinterest</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr">2026</span> Kristian Gibbs · @iamkristiangibbs · <a href="mailto:kristiangibbsm@gmail.com">kristiangibbsm@gmail.com</a></footer>
+
+<script>
+(function(){
+  var stage=document.getElementById('stage'),btn=document.getElementById('pp');
+  var cols=['#f2a93b','#8fc3ea','#f7eee0','#c9824a'];
+  var beats=[
+    {t:'blur',h:'Hey, my name is',d:850},
+    {t:'sig',h:'Kristian',d:1300,f:1},
+    {t:'words',h:'a Computer Science<br>student,',d:1050},
+    {t:'left',h:'video editor',d:700},
+    {t:'right',h:'and marketer',d:700},
+    {t:'flip',h:'who’s seeking<br>to work with',d:1000},
+    {t:'zoom',h:'personal brands',d:800},
+    {t:'words',h:'and small<br>businesses.',d:950},
+    {t:'down',h:'I believe in<br>emphasizing',d:900},
+    {t:'out reveal',h:'clarity',d:700},
+    {t:'glow flicker',h:'consistency',d:800},
+    {t:'rain',h:'creativity',d:800},
+    {t:'words',h:'and creating content<br>that brings',d:1100},
+    {t:'slam glow',h:'ATTENTION',d:900,f:1},
+    {t:'glitch',h:'and results.',d:800},
+    {t:'spin',h:'Let’s make something<br>that',d:900},
+    {t:'slam amber',h:'STANDS OUT',d:1000,f:1},
+    {t:'bounce',h:'I’m ready<br>when you are.',d:1600}
+  ];
+  var i=0,timer,paused=false;
+  function html(b){
+    if(b.t.indexOf('words')>-1){var n=0;return b.h.split(/(<br>)/).map(function(q){return q==='<br>'?q:q.split(' ').map(function(w){return w?'<span style="animation-delay:'+(n++*.09)+'s">'+w+'</span>':''}).join(' ')}).join('')}
+    if(b.t==='rain')return b.h.split('').map(function(c,k){return '<span style="color:'+cols[k%4]+';animation-delay:'+(k*.025)+'s">'+c+'</span>'}).join('');
+    return b.h;
+  }
+  function show(b){stage.innerHTML='<div class="b '+b.t+'">'+html(b)+'</div>'}
+  function next(){
+    if(paused)return;
+    var b=beats[i];show(b);
+    timer=setTimeout(function(){
+      var el=stage.firstChild;if(el)el.classList.add('leave',['xu','xl','xr','xz'][i%4]);
+      setTimeout(function(){i=(i+1)%beats.length;next()},70);
+    },b.d);
+  }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){show(beats[1]);btn.hidden=true;return}
+  btn.addEventListener('click',function(){
+    paused=!paused;btn.textContent=paused?'Play':'Pause';
+    btn.setAttribute('aria-label',paused?'Play intro animation':'Pause intro animation');
+    clearTimeout(timer);if(!paused)next();
+  });
+  next();
+})();
+</script>
+</body>
+</html>
