@@ -86,7 +86,8 @@ h3.sub{font-size:1.3rem;font-weight:600;margin:2.5rem 0 1rem}
 .svc li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid rgba(247,238,224,.2)}
 .svc h3{font-size:1.5rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
 .svc p{color:var(--muted);max-width:56ch}
-.vids{display:grid;grid-template-columns:1fr 1fr 1.9fr;gap:1rem;align-items:center}
+.vids{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;align-items:start}
+.vids .p{grid-column:span 2}.vids .l{grid-column:span 3}
 .vids figure{margin:0}
 .vids video{width:100%;display:block;border-radius:16px;background:#000;object-fit:cover}
 .vids figcaption,.pics figcaption{color:var(--muted);font-size:.9rem;margin-top:.5rem}
@@ -99,7 +100,7 @@ h3.sub{font-size:1.3rem;font-weight:600;margin:2.5rem 0 1rem}
 .do li::before{content:"";position:absolute;left:0;top:.45em;width:.9rem;height:.5rem;border-left:2.5px solid var(--amber);border-bottom:2.5px solid var(--amber);transform:rotate(-45deg)}
 .lead{color:var(--muted);max-width:50ch;margin-bottom:1.5rem}
 footer{padding:2rem 1.5rem calc(2rem + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.9rem;text-align:center}
-@media (max-width:760px){.vids{grid-template-columns:1fr 1fr}.pics{grid-template-columns:1fr 1fr;gap:.6rem}.pics img{border-radius:12px}.vids figure:last-child{grid-column:1/-1}.svc li{grid-template-columns:1fr;gap:.4rem}.bar nav a:not(.btn){display:none}}
+@media (max-width:760px){.vids{gap:.6rem}.vids .p{grid-column:span 3}.vids .p:nth-child(3){grid-column:2/span 4}.vids .l{grid-column:1/-1}.pics{grid-template-columns:1fr 1fr;gap:.6rem}.pics img{border-radius:12px}.svc li{grid-template-columns:1fr;gap:.4rem}.bar nav a:not(.btn){display:none}}
 @media (prefers-reduced-motion:reduce){.b,.sig,.rain span,.words span{animation:none!important;clip-path:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -157,9 +158,11 @@ footer{padding:2rem 1.5rem calc(2rem + env(safe-area-inset-bottom,0px));color:va
 
     <h3 class="sub" style="margin-top:0">Videos</h3>
     <div class="vids">
-      <figure><video controls playsinline preload="none" poster="clip1-poster.jpg" style="aspect-ratio:9/16" aria-label="Fashion outfit video"><source src="clip1.mp4" type="video/mp4"></video><figcaption>Outfit video</figcaption></figure>
-      <figure><video controls playsinline preload="none" poster="clip2-poster.jpg" style="aspect-ratio:9/16" aria-label="Behind the lens reel"><source src="clip2.mp4" type="video/mp4"></video><figcaption>Behind the lens reel</figcaption></figure>
-      <figure><video controls playsinline preload="none" poster="clip3-poster.jpg" style="aspect-ratio:16/9" aria-label="The art of being late"><source src="clip3.mp4" type="video/mp4"></video><figcaption>The art of being late</figcaption></figure>
+      <figure class="p"><video controls playsinline preload="none" poster="transition-poster.jpg" style="aspect-ratio:9/16" aria-label="Quick outfit change"><source src="transition.mov" type="video/mp4"></video><figcaption>Quick outfit change</figcaption></figure>
+      <figure class="p"><video controls playsinline preload="none" poster="clip1-poster.jpg" style="aspect-ratio:9/16" aria-label="Fashion outfit video"><source src="clip1.mp4" type="video/mp4"></video><figcaption>Outfit video</figcaption></figure>
+      <figure class="p"><video controls playsinline preload="none" poster="clip2-poster.jpg" style="aspect-ratio:9/16" aria-label="Behind the lens reel"><source src="clip2.mp4" type="video/mp4"></video><figcaption>Behind the lens reel</figcaption></figure>
+      <figure class="l"><video controls playsinline preload="none" poster="clip3-poster.jpg" style="aspect-ratio:16/9" aria-label="The art of being late"><source src="clip3.mp4" type="video/mp4"></video><figcaption>The art of being late</figcaption></figure>
+      <figure class="l"><video controls playsinline preload="none" poster="creativespace-poster.jpg" style="aspect-ratio:16/9" aria-label="My Creative Space"><source src="creativespace.mov" type="video/mp4"></video><figcaption>My Creative Space</figcaption></figure>
     </div>
 
     <div class="row">
